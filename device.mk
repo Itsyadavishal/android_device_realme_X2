@@ -272,6 +272,7 @@ PRODUCT_COPY_FILES += \
 
 # Parts
 PRODUCT_PACKAGES += \
+    RealmeDoze \
     RealmeProximityHelper
 
 # Perf
