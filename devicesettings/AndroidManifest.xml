@@ -13,6 +13,7 @@
      limitations under the License.
 -->
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
+          xmlns:tools="http://schemas.android.com/tools"
           android:sharedUserId="android.uid.system"
           package="org.lineageos.settings.device"
           android:versionCode="1"
@@ -82,6 +83,11 @@
                     android:name="android.service.quicksettings.action.QS_TILE"/>
             </intent-filter>
         </service>
+        <provider
+            android:name="androidx.startup.InitializationProvider"
+            android:authorities="${applicationId}.androidx-startup"
+            tools:replace="android:authorities"/>
+
         <service
             android:name="org.lineageos.settings.device.SRGBModeTileService"
             android:icon="@drawable/ic_srgb_tile"
